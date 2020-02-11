@@ -17,6 +17,12 @@
 # limitations under the License.
 #
 
+#----- Imports
+from __future__ import annotations
+from typing import List
+
+import sys
+
 #----- Classes
 class SemanticVersion:
     """Simple class to handle version management according to Semantic Versioning 2.0"""
@@ -140,3 +146,43 @@ class SemanticVersion:
 
         return False
 
+    @classmethod
+    def parse(cls, version: str) -> SemanticVersion:
+        """Parse a string version and create a SemanticVersion object"""
+        if not isinstance(version, str):
+            raise ValueError("Version should be a valid Python string.")
+
+        # extract the build value
+        if '+' in version:
+            try:
+                version, build = version.split('+')
+            except ValueError:
+                version = version.split('+')[0]
+                build = ""
+        else:
+            build = ""
+
+        # extract the pre-release value
+        if '-' in version:
+            try:
+                version, pre_release = version.split('-')
+            except ValueError:
+                version = version.split('-')[0]
+                pre_release = ""
+        else:
+            pre_release = ""
+        
+        # extract version information
+        values: List[str] = []
+        if version != "":
+            values = version.split('.')
+
+        numbers: List[int] = []
+        for i in range(3):
+            try:
+                numbers.append(int(values[i]))
+            except (ValueError, IndexError):
+                numbers.append(0)
+
+        # create a new object
+        return cls(major=numbers[0],minor=numbers[1],patch=numbers[2],pre_release=pre_release,build=build)
