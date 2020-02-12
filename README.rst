@@ -117,14 +117,13 @@ This package is released under the Apache License 2.0. See the bundled
 
 .. |python| image:: https://img.shields.io/static/v1?label=python&message=3%2e7%2b&color=blue&style=flat-square
     :target: https://www.python.org
-    :alt: Tests coverage
+    :alt: Python 3.7+
 
 .. |pypi| image:: https://img.shields.io/pypi/v/amtsemver?color=blue&style=flat-square
     :target: https://pypi.org/project/amtsemver
     :alt: Latest version released on PyPI
 
 .. |coverage| image:: https://img.shields.io/static/v1?label=coverage&message=100%25&color=blue&style=flat-square
-    :target: https://coveralls.io/github/aimktech/amtStats?branch=master
     :alt: Tests coverage
 
 .. |license| image:: https://img.shields.io/badge/license-Apache2.0-blue.svg?style=flat-square
