@@ -1,8 +1,8 @@
 Changelog
 =========
 
-`1.0.0 - 10-February-2020 <https://github.com/aimktech/amtstats.git>`__
------------------------------------------------------------------------
+`1.0.0 - February-2020 <https://github.com/aimktech/amtSemVer.git>`__
+---------------------------------------------------------------------
 
 * First Release
 
