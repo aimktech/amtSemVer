@@ -35,8 +35,8 @@ class TestParsing(unittest.TestCase):
         a = SemanticVersion.parse("1.2.3+1234")
         self.assertEqual(result, a)
 
-    def test_parse_wrong_build(self):
-        result = SemanticVersion(major=1, minor=2, patch=3, pre_release="", build="")
+    def test_parse_multiple_build(self):
+        result = SemanticVersion(major=1, minor=2, patch=3, pre_release="", build="1234")
         a = SemanticVersion.parse("1.2.3+1234+2345")
         self.assertEqual(result, a)
     
@@ -50,8 +50,8 @@ class TestParsing(unittest.TestCase):
         a = SemanticVersion.parse("1.2.3-alpha")
         self.assertEqual(result, a)
 
-    def test_parse_wrong_prerelease(self):
-        result = SemanticVersion(major=1, minor=2, patch=3, pre_release="", build="")
+    def test_parse_multiple_prerelease(self):
+        result = SemanticVersion(major=1, minor=2, patch=3, pre_release="alpha", build="")
         a = SemanticVersion.parse("1.2.3-alpha-beta")
         self.assertEqual(result, a)
     
