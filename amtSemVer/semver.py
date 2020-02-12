@@ -152,28 +152,25 @@ class SemanticVersion:
         if not isinstance(version, str):
             raise ValueError("Version should be a valid Python string.")
 
+        values: List[str] = []
+
         # extract the build value
         if '+' in version:
-            try:
-                version, build = version.split('+')
-            except ValueError:
-                version = version.split('+')[0]
-                build = ""
+            values = version.split('+')
+            version = values[0]
+            build = values[1]
         else:
             build = ""
 
         # extract the pre-release value
         if '-' in version:
-            try:
-                version, pre_release = version.split('-')
-            except ValueError:
-                version = version.split('-')[0]
-                pre_release = ""
+            values = version.split('-')
+            version = values[0]
+            pre_release = values[1]
         else:
             pre_release = ""
         
         # extract version information
-        values: List[str] = []
         if version != "":
             values = version.split('.')
 
