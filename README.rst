@@ -127,7 +127,7 @@ This package is released under the Apache License 2.0. See the bundled
     :target: https://travis-ci.org/aimktech/amtSemVer
     :alt: Travis build
 
-.. |coverage| image:: https://img.shields.io/static/v1?label=coverage&message=100%25&color=blue&style=flat-square
+.. |coverage| image:: https://img.shields.io/coveralls/github/aimktech/amtSemVer/master?style=flat-square
     :alt: Tests coverage
 
 .. |license| image:: https://img.shields.io/badge/license-Apache--2.0-blue.svg?style=flat-square
