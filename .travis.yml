@@ -6,7 +6,11 @@ python:
 # dependencies
 install:
   - pip install coverage
+  - pip install coveralls
 
 # command to run
 script:
   - coverage run --source=amtSemVer -m unittest
+
+after_success:
+  - coveralls
