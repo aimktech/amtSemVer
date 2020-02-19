@@ -1,7 +1,7 @@
 amtSemVer
 =========
 
-|python| |pypi| |coverage| |license|
+|license| |python| |pypi| |build| |coverage|
 
 ----
 
@@ -123,9 +123,13 @@ This package is released under the Apache License 2.0. See the bundled
     :target: https://pypi.org/project/amtsemver
     :alt: Latest version released on PyPI
 
+.. |build| image:: https://img.shields.io/travis/aimktech/amtSemVer/master.svg?style=flat-square
+    :target: https://travis-ci.org/aimktech/amtSemVer
+    :alt: Travis build
+
 .. |coverage| image:: https://img.shields.io/static/v1?label=coverage&message=100%25&color=blue&style=flat-square
     :alt: Tests coverage
 
-.. |license| image:: https://img.shields.io/badge/license-Apache2.0-blue.svg?style=flat-square
+.. |license| image:: https://img.shields.io/badge/license-Apache--2.0-blue.svg?style=flat-square
     :target: https://raw.githubusercontent.com/aimktech/amtstats/master/LICENSE.txt
     :alt: Package license
