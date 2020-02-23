@@ -131,5 +131,5 @@ This package is released under the Apache License 2.0. See the bundled
     :alt: Tests coverage
 
 .. |license| image:: https://img.shields.io/badge/license-Apache--2.0-blue.svg?style=flat-square
-    :target: https://raw.githubusercontent.com/aimktech/amtstats/master/LICENSE.txt
+    :target: https://raw.githubusercontent.com/aimktech/amtsemver/master/LICENSE.txt
     :alt: Package license
